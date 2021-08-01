@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmitDesignsLimited-slidebar</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="slidebar.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logoContent">
+            <div class="logo">
+                <div class="logoName">Amit Designs Limited</div>
+            </div>
+            <i class='bx bx-menu' id = "btn"></i>
+        </div>
+        <ul class="navList">
+            <li>
+                <i class= 'bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class= 'bx bx-grid'></i>
+                    <span class="linksName">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class= 'bx bx-user'></i>
+                    <span class="linksName">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="message.html">
+                    <i class= 'bx bx-chat'></i>
+                    <span class="linksName">Messages</span>
+                </a>
+                <span class="tooltip">Messages</span>
+            </li>
+            <li>
+                <a href="analytics.html">
+                    <i class= 'bx bx-pie-chart-alt'></i>
+                    <span class="linksName">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+        
+            <li>
+                <a href="speed.html">
+                    <i class= 'bx bx-heart'></i>
+                    <span class="linksName">My Designs</span>
+                </a>
+                <span class="tooltip">My Designs</span>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class= 'bx bx-cog'></i>
+                    <span class="linksName">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+           
+        </ul>
+        <div class="profileContent">
+            <div class="profile">
+                <div class="profileDetails">
+                    <img src="https://lh3.googleusercontent.com/a-/AOh14GgoTL7dDtHkZ3rYhuBtx2KNDYqYygFgt_tBgsSYeA=s288-c-rg-br100" alt="Amit" >
+                    <div class="nameJob">
+                        <div class="name">Amit Kumar</div>
+                        <div class="job">Web Designer</div>
+                    </div>
+                </div>
+                <a href="login.html">
+                    <i class='bx bx-log-out' id="logOut"></i>
+                    <span class="linksName">Log-Out</span>
+                    </a>
+                    <span class="tooltip">Log-Out</span>
+            </div>
+        </div>
+    </div>
+    <div class="contentDashBoard">
+
+        <img src="imageDashBoard.svg" alt="">
+    </div>
+    <div class="Dashcontents">
+        <div class="mail">
+            <form action="" onclick="return validation()">
+        <h1>Stay informed on all things designs.</h1>
+        <input type="text"  placeholder="Your email" name="Your email" class="inputext" autocomplete="off" oncopy = "return false" onpaste ="return false"> 
+        <span class="error"></span><br>
+       <input type="checkbox" name="checkB" id="checkB"> <label for="policy" class="policy">I've read Amit Designs Limited's Privacy Policy and to receive the Amit Kumar newsletter for design stories and inspiration. </label>
+        <input type="Submit" value="Submit" class="btn1">
+    </form>
+        </div>
+    </div>
+    
+    <script src="slidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmitDesignsLimited-slidebar</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a7a9d28cbc.js" crossorigin="anonymous"></script>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <link rel="stylesheet" href="slidebar.css">
+
+  <!-- js for pie chart 
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Covid Cases', 'India (in millions)'],
+        ['Confirmed Cases',  2.85],
+        ['Confirmed Deaths',  0.66],
+        ['Vaccinated', 7.85],
+        ['Discharged', 2.0791]
+      ]);
+
+    var options = {
+      legend: 'none',
+      pieSliceText: 'label',
+    //   title: 'Impact of Covid In India',
+      pieStartAngle: 100,
+      
+    };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
+  </script> -->
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logoContent">
+            <div class="logo">
+                <div class="logoName">Amit Designs Limited</div>
+            </div>
+            <i class='bx bx-menu' id = "btn"></i>
+        </div>
+        <ul class="navList">
+            <li>
+                <i class= 'bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class= 'bx bx-grid'></i>
+                    <span class="linksName">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class= 'bx bx-user'></i>
+                    <span class="linksName">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="message.html">
+                    <i class= 'bx bx-chat'></i>
+                    <span class="linksName">Messages</span>
+                </a>
+                <span class="tooltip">Messages</span>
+            </li>
+            <li>
+                <a href="analytics.html">
+                    <i class= 'bx bx-pie-chart-alt'></i>
+                    <span class="linksName">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+        
+            <li>
+                <a href="speed.html">
+                    <i class= 'bx bx-heart'></i>
+                    <span class="linksName">My Designs</span>
+                </a>
+                <span class="tooltip">My Designs</span>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class= 'bx bx-cog'></i>
+                    <span class="linksName">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </ul>
+        <div class="profileContent">
+            <div class="profile">
+                <div class="profileDetails">
+                    <img src="https://lh3.googleusercontent.com/a-/AOh14GgoTL7dDtHkZ3rYhuBtx2KNDYqYygFgt_tBgsSYeA=s288-c-rg-br100" alt="Amit" >
+                    <div class="nameJob">
+                        <div class="name">Amit Kumar</div>
+                        <div class="job">Web Designer</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="logOut"></i>
+            </div>
+        </div>
+    </div>
+    <div class="analysisContents">
+        <div class="conta">
+        <h1>COVID 19 IMPACTED IN INDIA as per the 
+            <br>
+    Ministry of Health and Family Welfare</h1>
+        <h2>Precautions to take :- </h2>
+            <ul class="animate__animated animate__lightSpeedInLeft">
+                <li><i class="fas fa-theater-masks"></i>  Wear Mask Everytime.</li>
+                <li><i class="fas fa-pump-medical"></i>  Sanatize your hands.</li>
+                <li><i class="fas fa-syringe"></i>  Get Vaccinated ASAP.</li>
+                </ul>
+           <div class="buttonCases">
+
+               <button class="b1"> Active Cases </button>
+               <button class="b2"> Discharged</button>
+               <button class="b3"> Deaths</button>
+               <button class="b4"> Total Vaccination</button>
+           
+            </div>
+        
+        
+        <div id="piechart" style="width: 900px; height: 500px;"></div>
+    </div>
+    <img src="analysis.svg" alt="analysis page">
+    </div>
+    <script src="slidebar.js"></script>
+</body>
+</html>
