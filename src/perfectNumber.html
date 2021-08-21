@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techi Mac Amit Reversing String method</title>
+    <title>Document</title>
 </head>
 <style>
     *{
@@ -56,8 +56,15 @@
        position:absolute;
        width: 10%;
        height: 30%;
-      
-
+   }
+   .btn{
+       position: absolute;
+       top: 76%;
+       left: 45%;
+       width: 10rem;
+       height: 5rem;
+       font-size: 1.5rem;
+       border-radius: 18px;
    }
     
 </style>
@@ -65,39 +72,39 @@
     <video class="vid" src="/src/video/N.mp4" muted="" autoplay=""></video>
     <div class="main">
         <div class="left">
-        <input type="text" placeholder="Enter a string" class="input" >
-        <br><label for="text">You can enter a string value here.</label>
+        <input type="text" placeholder="Enter a number" class="input" >
+        <br><label for="text">You can enter a number here.</label>
         </div>
         <div class="right">
-        <input type="text" placeholder="Check the Reverese" class="output">
-        <br><label for="text">Check the reverse of the string here.</label>
+        <input type="text" placeholder="Check the Perfect Number" class="output">
+        <br><label for="text">Check the Perfect number possiblity here.</label>
          </div>
+         <button type="submit" class="btn">Click Here</button>
     </div>
-    
-
     <script>
-
-       let input = document.querySelector('.input');
-       let output = document.querySelector('.output');
-
-       function isReverse(x){
-            let st = "";
-            console.log(x);
-            for(let i = x.length-1 ; i>=0 ; i-- ){
-                st = st + x[i] ;
+        const input = document.querySelector('.input');
+        const output = document.querySelector('.output');
+        const btn = document.querySelector('.btn')
+        let sum = 0;
+        function isPerfect(x) {
+            for(let i = 1 ; i<= x/2 ; i++){
+                sum += i;
             }
-            return st;
-       }
-       
-       
-      
-       input.addEventListener('keyup', (e) => {
-           let v = e.target.value;
-           let res = isReverse(v);
-           output.value = res;
-           
-       })
+            return sum == x ;
+        }
+        // const num =isPerfect(n);
+        // console.log(num);
 
+    input.addEventListener('keyup', (e) => {
+        let num = e.target.value;
+        let res = isPerfect(num);
+        btn.addEventListener('click', () => {
+        output.value = res;})
+        setTimeout(() => {
+            output.value = " ";
+            input.value = " ";
+        },3000)
+    })
     </script>
 </body>
 </html>

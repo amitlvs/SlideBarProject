@@ -62,7 +62,7 @@
     
 </style>
 <body>
-    <video class="vid" src="/src/video/N.mp4" muted="" autoplay=""></video>
+    <video class="vid" src="N.mp4" muted="" autoplay=""></video>
     <div class="main">
         <div class="left">
         <input type="text" placeholder="Enter a string" class="input" >
@@ -82,11 +82,16 @@
 
        function isReverse(x){
             let st = "";
+            let st1 = "";
             console.log(x);
             for(let i = x.length-1 ; i>=0 ; i-- ){
                 st = st + x[i] ;
             }
-            return st;
+            let s2 = st.split(" ");
+            for(let i = s2.length-1 ; i >=0 ; i--){
+                st1 += s2[i]+ " ";
+            }
+            return st1;
        }
        
        
