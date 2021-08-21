@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techi Mac Amit Reversing String method</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+    }
+    .main{
+        width: 100vw;
+        height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+   .left{
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+   }
+   .right{
+    width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       align-items: center;
+    }
+    input{
+        height: 20%;
+       width: 78%;
+       text-align: center;
+       font-size: 2.5rem;
+       border-radius: 10px;
+   }
+   label{
+       color: blanchedalmond;
+       font-size: 1.5rem;
+   }
+   .vid{
+       position:absolute;
+       width: 10%;
+       height: 30%;
+      
+
+   }
+    
+</style>
+<body>
+    <video class="vid" src="N.mp4" muted="" autoplay=""></video>
+    <div class="main">
+        <div class="left">
+        <input type="text" placeholder="Enter a string" class="input" >
+        <br><label for="text">You can enter a string value here.</label>
+        </div>
+        <div class="right">
+        <input type="text" placeholder="Check the Reverese" class="output">
+        <br><label for="text">Check the reverse of the string here.</label>
+         </div>
+    </div>
+    
+
+    <script>
+
+       let input = document.querySelector('.input');
+       let output = document.querySelector('.output');
+
+       function isReverse(x){
+            let st = "";
+            console.log(x);
+            for(let i = x.length-1 ; i>=0 ; i-- ){
+                st = st + x[i] ;
+            }
+            return st;
+       }
+       
+       
+      
+       input.addEventListener('keyup', (e) => {
+           let v = e.target.value;
+           let res = isReverse(v);
+           output.value = res;
+           
+       })
+
+    </script>
+</body>
+</html>
