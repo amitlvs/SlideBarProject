@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian-Standard-Number-To-Words | AmitDesignsLtd.</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+    }
+    .main{
+        width: 100vw;
+        height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+   .left{
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+   }
+   .right{
+    width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       align-items: center;
+    }
+    input{
+        margin-top: 10rem;
+        height: 30%;
+       width: 78%;
+       text-align: center;
+       font-size: 2.5rem;
+       border-radius: 10px;
+       overflow-wrap: break-word;
+   }
+   textarea{
+    font-size: 2.5rem;
+    border-radius: 10px;
+   }
+   label{
+       color: blanchedalmond;
+       font-size: 1.5rem;
+   }
+   .vid{
+       position:absolute;
+       width: 10%;
+       height: 30%;
+      
+
+   }
+    
+</style>
+<body>
+    <video class="vid" src="/src/video/N.mp4" muted="" autoplay=""></video>
+    <div class="main">
+        <div class="left">
+        <input type="text" placeholder="Enter a number" class="input" >
+        <br><label for="text">You can enter a Number here.</label>
+        </div>
+        <div class="right">
+        <textarea rows="4" cols="37" wrap="soft" placeholder="In Words" class="output"></textarea>
+        <br><label for="text">Number will be changed in Indian Standard Words</label>
+         </div>
+    </div>
+    
+
+    <script>
+
+       let input = document.querySelector('.input');
+       let output = document.querySelector('.output');
+
+        var a = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ','eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
+        var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
+
+    function inWords (num) {
+       if ((num = num.toString()).length > 9) return 'too big';
+        n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+       if (!n) return; var str = '';
+         str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'crore ' : '';
+         str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'lakh ' : '';
+         str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'thousand ' : '';
+         str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'hundred ' : '';
+         str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only ' : '';
+    return str;
+}
+
+       input.addEventListener('keyup', (e) => {
+           let v = e.target.value;
+           let res = inWords(v);
+           output.value = res;
+           
+       })
+
+    </script>
+</body>
+</html>
